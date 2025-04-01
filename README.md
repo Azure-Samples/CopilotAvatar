@@ -1,16 +1,42 @@
 # Project Name
 
-(short, 1-3 sentenced, description of the project)
+Azure Speech Avatar integration with Copilot 
 
 ## Features
 
 This project framework provides the following features:
 
-* Feature 1
-* Feature 2
-* ...
+* Avatar demo
+* Copilot integration with no OpenAI
 
 ## Getting Started
+To run the project locally, create a .vscode folder, and put the following contents into the launch.json 
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Run Flask (app.py)",
+        "type": "debugpy",
+        "request": "launch",
+        "module": "flask",
+        "env": {
+          "FLASK_APP": "app.py",
+          "FLASK_RUN_HOST": "0.0.0.0",
+          "FLASK_RUN_PORT": "5000",
+          "SPEECH_REGION": "<your-speech-region>",
+          "SPEECH_KEY": "<your-speech-key>",
+
+        },
+        "args": [
+          "run"
+        ],
+        "jinja": true,
+        "console": "integratedTerminal"
+      }
+    ]
+  }
+```
 
 ### Prerequisites
 
