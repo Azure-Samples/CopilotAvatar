@@ -53,12 +53,8 @@ if enable_vad and enable_websockets:
 
 @app.route("/")
 def index():
-    return render_template("basic.html", methods=["GET"], client_id=initializeClient())
+    return render_template("chat.html", methods=["GET"], client_id=initializeClient(), enable_websockets=enable_websockets)
 
-
-@app.route("/basic")
-def basicView():
-    return render_template("basic.html", methods=["GET"], client_id=initializeClient())
 
 
 @app.route("/chat")

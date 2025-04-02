@@ -1,4 +1,5 @@
 import re
+import os
 import requests
 
 class DirectLineClient:
@@ -6,7 +7,7 @@ class DirectLineClient:
         self._watermark = None
         self._app_settings = {
             "BotId": None,
-            "BotTokenEndpoint": "https://3da91219fae9e6bf878a89078d0db4.1c.environment.api.powerplatform.com/powervirtualagents/botsbyschema/cra66_dianne/directline/token?api-version=2022-03-01-preview",
+            "BotTokenEndpoint": os.environ.get('COPILOT_ENDPOINT'),
             "BotName": "Dianne"
         }
         # self._end_conversation_message = self._bot_env_prefix + os.getenv("END_CONVERSATION_MESSAGE", "quit")
