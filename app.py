@@ -16,9 +16,8 @@ import traceback
 import uuid
 from flask import Flask, Response, render_template, request
 from flask_socketio import SocketIO, join_room
-from azure.identity import DefaultAzureCredential
 from vad_iterator import VADIterator, int2float
-from DirectLineClient import DirectLineClient
+from direct_line_client import DirectLineClient
 
 
 app = Flask(__name__, template_folder='.')

@@ -1,5 +1,5 @@
 import asyncio
-from DirectLineClient import DirectLineClient
+from direct_line_client import DirectLineClient
 
 
 dl_client = DirectLineClient()
