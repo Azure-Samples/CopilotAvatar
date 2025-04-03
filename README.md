@@ -15,27 +15,27 @@ To run the project locally, create a .vscode folder, and put the following conte
 {
     "version": "0.2.0",
     "configurations": [
-      {
-        "name": "Run Flask (app.py)",
-        "type": "debugpy",
-        "request": "launch",
-        "module": "flask",
-        "env": {
-          "FLASK_APP": "app.py",
-          "FLASK_RUN_HOST": "0.0.0.0",
-          "FLASK_RUN_PORT": "5000",
-          "SPEECH_REGION": "<your-speech-region>",
-          "SPEECH_KEY": "<your-speech-key>",
-
-        },
-        "args": [
-          "run"
-        ],
-        "jinja": true,
-        "console": "integratedTerminal"
-      }
+        {
+            "name": "Run Flask (app.py)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "app.py",
+                "FLASK_RUN_HOST": "0.0.0.0",
+                "FLASK_RUN_PORT": "5000",
+                "SPEECH_REGION": "<your-region>",
+                "SPEECH_KEY": "<your-key>",
+                "COPILOT_ENDPOINT": "<your-copilot-endpoint>"
+            },
+            "args": [
+                "run"
+            ],
+            "jinja": true,
+            "console": "integratedTerminal"
+        }
     ]
-  }
+}
 ```
 
 ### Prerequisites
