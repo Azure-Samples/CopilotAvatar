@@ -1,4 +1,4 @@
-# Project Name
+# Copilot Avatar
 
 Azure Speech Avatar integration with Copilot 
 
