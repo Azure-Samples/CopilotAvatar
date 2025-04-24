@@ -1,4 +1,4 @@
-# Project Name
+# Copilot Avatar
 
 The text-to-speech avatar transforms written content into a digital video featuring a photorealistic human, whether using a prebuilt avatar or a customized version, all while delivering a natural-sounding voice. These avatar videos can be generated either asynchronously or in real-time. Developers have the option to create applications that incorporate the text-to-speech avatar through an API or utilize a content creation tool within Speech Studio to produce video content without any coding experience. Powered by advanced neural network models, this feature allows users to create lifelike, high-quality synthetic avatar videos for a variety of applications, all while upholding responsible AI practices.
 
