@@ -208,8 +208,8 @@ function setupWebRTC(iceServerUrl, iceServerUsername, iceServerCredential) {
                     }
                 }
 
-                processVideoFrames();
-
+                //videoElement.style.filter = 'contrast(200%) saturate(150%) brightness(120%) hue-rotate(5deg)'
+                
                 setTimeout(() => { sessionActive = true }, 5000) // Set session active after 5 seconds
             }
         }
@@ -446,30 +446,6 @@ function checkHung() {
             }
         }, 2000)
     }
-}
-
-function processVideoFrames() {
-    const videoElement = document.getElementById('videoPlayer');
-    const canvas = document.getElementById('videoCanvas');
-    const ctx = canvas.getContext('2d');
-
-    function drawFrame() {
-        if (videoElement.readyState >= 2) {
-            ctx.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
-            let frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
-            let length = frame.data.length;
-
-            // Convert RGB to grayscale
-            for (let i = 0; i < frame.data.length; i += 4) {
-                let avg = (frame.data[i] + frame.data[i + 1] + frame.data[i + 2]) / 3;
-                frame.data[i] = frame.data[i + 1] = frame.data[i + 2] = avg;
-            }
-            ctx.putImageData(frame, 0, 0);
-        }
-        requestAnimationFrame(drawFrame);
-    }
-
-    drawFrame();
 }
 
 window.onload = () => {
@@ -800,6 +776,3 @@ window.updateLocalVideoForIdle = () => {
 window.onbeforeunload = () => {
     navigator.sendBeacon('/api/releaseClient', JSON.stringify({ clientId: clientId }))
 }
-
-// Add canvas element for video
-document.body.insertAdjacentHTML('beforeend', '<canvas id="videoCanvas" width="960" height="540"></canvas>');
