@@ -97,6 +97,12 @@ To run the demo, follow these steps:
 - ...
 
 
+
+## Acknowledgements
+
+Special thanks to [@yinhew](https://github.com/yinhew), Yulin Li, and the entire crew behind [Azure Cognitive Services Speech SDK](https://github.com/Azure-Samples/cognitive-services-speech-sdk) for their invaluable contributions and support to the developer community.
+
+
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/ajakupov/NewsExplorer.svg?style=for-the-badge
 [contributors-url]: https://github.com/ajakupov/NewsExplorer/graphs/contributors

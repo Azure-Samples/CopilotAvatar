@@ -17,9 +17,9 @@ COPY . .
 ENV FLASK_APP=app.py  
 ENV FLASK_RUN_HOST=0.0.0.0  
 ENV FLASK_RUN_PORT=5000  
-ENV SPEECH_REGION=<your-region>  
-ENV SPEECH_KEY=<your-key>  
-ENV COPILOT_ENDPOINT=<your-endpoint>  
+ENV SPEECH_REGION=westeurope
+ENV SPEECH_KEY=D1EAH4lipnhibjqQJYV1BHZQuQVM2pVT4SExzbouv0YXMh11HGvZJQQJ99BCAC5RqLJXJ3w3AAAYACOGXKuc  
+ENV COPILOT_ENDPOINT=https://3da91219fae9e6bf878a89078d0db4.1c.environment.api.powerplatform.com/powervirtualagents/botsbyschema/cra66_dianne/directline/token?api-version=2022-03-01-preview 
   
 # Expose the port Flask will run on  
 EXPOSE 5000  
